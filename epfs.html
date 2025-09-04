@@ -1,0 +1,145 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="verify-v1" content="mNfhtYktA6rXFc2Cyc/BO5BkfFOzKrW6rXLHdPOXsRg=" /><meta name=viewport content="width=device-width, initial-scale=1">
+
+<title>Extremal Problems for Finite Sets</title></head>
+<body>
+<font size=5>Extremal Problems for Finite Sets</font>
+<br><font size=4>by Peter Frankl and Norihide Tokushige</font>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  CommonHTML: { matchFontHeight: false }
+});
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<br><br>
+<b>Errata</b>
+
+<ol>
+<li> page 206, line 5, in the RHS of the polynomial \( f_y \) the second
+sum should be taken over \( I, K \) instead of \( J, K \).
+On the same page there are some \( x, y, z\) which should be 
+written in the math bold face. 
+
+<li> page 7, line 13, "\( S_x (S_y (\mathcal F)) = S_y (S_x (\mathcal F)) \)"
+is wrong. In fact, if \( \mathcal F = \{ \{x,y,z\}, \{z\} \} \) then
+\( S_x (S_y (\mathcal F)) = \{ \{x,z\}, \{z\} \} \) while
+\( S_y (S_x (\mathcal F)) = \{ \{y,z\}, \{z\} \} \).
+The point here is that 
+if \( x \in F \in S_x(\mathcal F) \) then 
+\( F \setminus \{x\} \in S_x(\mathcal F) \), and moreover this property
+is unchanged even if we replace \( S_x(\mathcal F) \) with
+\( S_y(S_x(\mathcal F)) \). Noted by Bjarne Schülke, 2019.07.26.
+
+<li> page 8, proof of Proposition 2.6, replace \( \mathcal F \)
+and \( S_x(\mathcal F) \) with \( \mathcal F|_T \) and
+\( S_x(\mathcal F)|_T \), respectively. Noted by Bjarne Schülke, 2019.07.29.
+
+<li> page 8, line -2, delete "\( \in \)"
+
+<li> page 13, in the proof of Theorem 3.1, "\( X \)" should be "\( [n] \)"
+(two places).
+
+<li> page 15, line 3--5, "For any \(\mathcal F\subset 2^X\) ... is not true"
+should be "If \(\mathcal F\subset 2^X \) satisfies that \( |\mathcal F|_Y|=t \)
+for all \( Y \in \binom Xy \), then \( (|X|,|\mathcal F|) \rightarrow (y,t+1) \)
+is not true." Noted by Bjarne Schülke, 2019.07.29.
+
+<li> page 21, line 9, at the end of the sentence, $\mathcal G(n)$ should be 
+$\mathcal G(\bar n)$.
+
+<li> page 21, proof of Theorem 4.5: The induction is written in a
+confusing way. The actual scheme should be as follows.
+Let $S(n,s)$ be the statement that "if $|G\cup G'|\leq n-s$ holds for all
+$G,G'\in\mathcal G$ then (i) or (ii) holds." We will show $S(n,s)$ for 
+$\{(n,s): n\geq 1,\, n\geq s\geq 1\}$.
+Note that for all $n\geq 1$ we have $S(n,n)$ and $S(n,1)$. In fact the latter is
+equivalent to Theorem 1.3 (i).
+Also $S(n,n-1)$ is true for all $n\geq 2$ (this is the $n=s+1$ case).
+Thus $S(3,s)$ is true for $1\leq s\leq 3$ at this point.
+Now choose $n\geq 4$ and then $1\leq s\leq n-1$ arbitrarily, and we show
+$S(n,s)$ by induction on $n$. Our assumption is that $S(n',s')$ is true
+for all $1\leq n'< n$ and $n' \geq s'\geq 1$. So we can apply $S(n-1,s-1)$ to
+$\mathcal G(\bar n)$ and $S(n-1,s+1)$ to $\mathcal G(n)$.
+Noted by Bjarne Schülke, 2019.07.29.
+
+<li> page 10, the proof of Theorem 2.14: 
+The first two lines of the proof should be replaced with the following.
+"We prove the statement by induction on $k$ and $x$. 
+One can verify the statement for the case $k=1$ (and 
+$x\geq k$). Let $k\geq 2$, and assume that the statement holds for all
+$(k',x')$ with $k'\leq x'$ and $k' < k$. We show the statement for $(k,x)$
+with $x\geq k$. The case $x=k$ is trivial, so we suppose $x\geq k+1$, that is,"
+Noted by Bjarne Schülke, 2019.08.04.
+
+<li> page 24, line -5: $\mathcal F=1,2,1,3,2,3$ should be
+$\mathcal F=\{\{1,2\},\{1,3\},\{2,3\}\}$.
+
+<li> page 26, line -5: at the end of the displayed equation
+should be 
+"$\ldots\leq \displaystyle \sum_{S\in\mathcal S}\frac 1 {\binom n{|S|}}\leq 1$"
+instead of 
+"$\ldots\leq\displaystyle\sum_{S\in\mathcal S} \frac 1 {\binom n{\lfloor\frac n{|S|}\rfloor}}\leq 1$."
+
+<li> page 28, line -13: "Let $t\geq 2$" should be "Let $r\geq 2$."
+
+<li> page 28, line -3: "arcs $F_1^{(j)},\ldots,F_r^{(j)},$ where ..." 
+should be
+"arcs $F_1^{(j)},\ldots,F_r^{(j)}$ of size $k_1,\ldots,k_r$, respectively, where ..."
+
+<li> page 29, between line 13 and 14: add "If $r=2$ then we may assume that
+$k_1=1, k_2=n$, but in this case $\mathcal F_1$ and $\mathcal F_2$ cannot be 
+2-cross union. So we may assume that $r\geq 3$." 
+Noted by Bjarne Schülke, 2019.08.04.
+
+<li> page 29, line 14: "assume that $|F_s| < n$" should be "assume that 
+$|\mathcal F_s| < n$."
+
+<li> page 31, line -3: "$A=\{2,7.10\}$" should be "$A=\{2,7,10\}$."
+
+<li> page 32, line -2: "$\binom{[n]}k$" should be "$\binom{[a_k]}k$."
+
+<li> page 33, line -8: the first term in the RHS of the displayed equation
+should be "$\binom{a_{k-1}}{k-2}$" instead of "$\binom{a_{k-1}}{k-1}$." 
+
+<li> page 35, line 6: "$|\mathcal F(1)| \leq \ldots$"
+should be "$|\mathcal F(1)| \geq \ldots$"
+
+<li> page 35, line 12: "then (b) and the induction hypothesis ..." should be
+"then the induction hypothesis and (a) ..." 
+
+<li> page 41, line 5: "Let $l,s,m$, ... integers." should be
+"Let $l,s,m$, ... integers with $n=ms$."
+
+<li> page 41, at the end of the last sentence: "$1\leq i\leq 2(m-l)+1$" 
+should be "$1\leq i\leq 2(m-l)-1$."
+
+<li> page 125, line 10: the last term is $(N-v+1)$ instead of $(N-v-1)$.
+(2021.02.22)
+
+<li> page 55, (10.2): 
+the RHS is $(k-t+1)(2+\frac{t-1}{r})$
+instead of $(k-t+1)(2+\frac{r-1}r)$.
+
+<li> page 57, in the middle, displayed inequlaity:
+the RHS is $(k'-t'+1)(2+\frac{t'-1}{r'})$
+instead of $(k'-t'+1)(2+\frac{r-1}r')$.
+(2022.09.28)
+
+<li> page 198, line $-9$:
+"with new $n\times n$ matrices" should be "with new $2^n\times 2^n$ matrices."
+(2023.07.09)
+</ol>
+
+<hr>
+Comments are greatly appreciated.
+<!--
+<br>
+<img src="designmail.gif"> 
+-->
+</body>
+</html>
